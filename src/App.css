@@ -1,0 +1,533 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.app {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 270px 1fr 280px;
+  background: #0e1117;
+  color: white;
+}
+
+.sidebar,
+.right-panel {
+  background: #151922;
+  padding: 24px;
+}
+
+.sidebar {
+  border-right: 1px solid #252a35;
+}
+
+.right-panel {
+  border-left: 1px solid #252a35;
+}
+
+.main {
+  padding: 36px;
+  overflow-x: auto;
+}
+
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #22d3ee, #6366f1);
+  font-weight: 900;
+}
+
+.brand h2,
+.brand p {
+  margin: 0;
+}
+
+.brand p,
+.main p,
+.right-panel p {
+  color: #94a3b8;
+}
+
+nav {
+  margin-top: 35px;
+}
+
+nav button {
+  width: 100%;
+  display: block;
+  text-align: left;
+  margin-bottom: 12px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: transparent;
+  color: white;
+}
+
+nav button:hover,
+nav button:first-child {
+  background: #252a35;
+}
+
+.side-card {
+  margin-top: 32px;
+  padding: 18px;
+  border-radius: 16px;
+  background: #202532;
+}
+
+.side-card span,
+.side-card p {
+  color: #94a3b8;
+}
+
+.side-card strong {
+  display: block;
+  margin: 8px 0;
+  font-size: 32px;
+}
+
+.ghost {
+  width: 100%;
+  margin-top: 18px;
+  background: #252a35;
+  color: white;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.topbar button {
+  height: 48px;
+  background: #2563eb;
+  color: white;
+  border-radius: 12px;
+  padding: 0 18px;
+}
+
+.eyebrow {
+  margin-top: 0;
+  color: #22d3ee;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+h1 {
+  margin: 0;
+  font-size: 44px;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 22px;
+  min-width: 1080px;
+}
+
+.metric {
+  background: #151922;
+  border: 1px solid #252a35;
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.metric span {
+  display: block;
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+.metric strong {
+  font-size: 32px;
+}
+
+.red {
+  color: #fb7185;
+}
+
+.green {
+  color: #22c55e;
+}
+
+.ticket-form {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 140px 130px 130px 120px;
+  gap: 12px;
+  margin-bottom: 22px;
+  min-width: 1080px;
+}
+
+.ticket-form input,
+.ticket-form select {
+  border: 1px solid #252a35;
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: #151922;
+  color: white;
+}
+
+.ticket-form button {
+  background: #2563eb;
+  color: white;
+  border-radius: 12px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 260px);
+  gap: 16px;
+  min-width: 1080px;
+  align-items: start;
+}
+
+.column {
+  min-height: 500px;
+  background: #11151d;
+  border: 1px solid #252a35;
+  border-radius: 18px;
+  padding: 14px;
+}
+
+.column-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.column-head h3 {
+  margin-top: 0;
+}
+
+.column-head span {
+  background: #252a35;
+  padding: 4px 9px;
+  border-radius: 999px;
+  color: #cbd5e1;
+}
+
+.ticket {
+  background: #1b2030;
+  border: 1px solid #303747;
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 14px;
+}
+
+.ticket h4 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.ticket p {
+  color: #94a3b8;
+  margin: 0 0 12px;
+}
+
+.chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.chips span {
+  background: #252a35;
+  color: #cbd5e1;
+  padding: 5px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.priority {
+  color: #fb7185;
+  font-size: 13px;
+}
+
+.assign {
+  display: grid;
+  gap: 6px;
+  color: #94a3b8;
+  font-size: 13px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.assign select {
+  width: 100%;
+  background: #151922;
+  color: white;
+  border: 1px solid #252a35;
+  border-radius: 10px;
+  padding: 9px;
+}
+
+.ticket-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ticket-actions button {
+  background: #2563eb;
+  color: white;
+  border-radius: 10px;
+  padding: 8px 10px;
+  font-size: 12px;
+}
+
+.ticket-actions .danger {
+  background: #e11d48;
+}
+
+.agents {
+  margin-bottom: 28px;
+}
+
+.agent {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: #6366f1;
+  color: white;
+  font-weight: bold;
+}
+
+.agent p {
+  margin: 3px 0;
+}
+
+.agent span {
+  color: #22c55e;
+  font-size: 13px;
+}
+
+.activity {
+  padding-left: 18px;
+  line-height: 1.8;
+  color: #cbd5e1;
+}
+
+.light {
+  background: #f4f7fb;
+  color: #111827;
+}
+
+.light .sidebar,
+.light .right-panel,
+.light .metric,
+.light .ticket-form input,
+.light .ticket-form select,
+.light .assign select {
+  background: white;
+  color: #111827;
+}
+
+.light .column {
+  background: white;
+}
+
+.light .ticket {
+  background: #f9fafb;
+}
+.app.light {
+  background: #f4f7fb;
+  color: #111827;
+}
+
+.light .sidebar,
+.light .right-panel {
+  background: #ffffff;
+  color: #111827;
+  border-color: #e5e7eb;
+}
+
+.light .main {
+  background: #f4f7fb;
+  color: #111827;
+}
+
+.light .sidebar p,
+.light .main p,
+.light .right-panel p {
+  color: #64748b;
+}
+
+.light nav button {
+  color: #111827;
+}
+
+.light nav button:hover,
+.light nav button:first-child {
+  background: #eef2ff;
+}
+
+.light .side-card {
+  background: #eef2ff;
+}
+
+.light .metric,
+.light .column,
+.light .ticket {
+  background: #ffffff;
+  border-color: #dbe3ef;
+}
+
+.light .column-head span {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.light .chips span {
+  background: #e8eef8;
+  color: #334155;
+}
+
+.light .ticket-form input,
+.light .ticket-form select,
+.light .ticket select {
+  background: #ffffff;
+  color: #111827;
+  border-color: #cbd5e1;
+}
+
+.light .activity {
+  color: #475569;
+}
+
+.light .ghost,
+.light .theme-button {
+  background: #111827;
+  color: white;
+}
+button,
+.ticket,
+.metric,
+.column,
+.agent,
+.side-card {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.ticket:hover,
+.metric:hover,
+.side-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+  border-color: #3b82f6;
+}
+
+.agent:hover {
+  transform: translateX(4px);
+}
+
+.toast {
+  animation: slideUp 0.25s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(18px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.page-panel {
+  min-height: 500px;
+  padding: 24px;
+  border-radius: 18px;
+  background: #151922;
+  border: 1px solid #252a35;
+}
+
+.light .page-panel {
+  background: white;
+  border-color: #e5e7eb;
+}
+
+.report-metrics {
+  margin-top: 24px;
+}
+.page-panel {
+  min-height: 500px;
+  width: 100%;
+  max-width: 100%;
+  padding: 24px;
+  border-radius: 18px;
+  background: #151922;
+  border: 1px solid #252a35;
+  overflow: hidden;
+}
+
+.light .page-panel {
+  background: white;
+  border-color: #e5e7eb;
+}
+
+.report-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.report-metrics .metric {
+  min-width: 0;
+}
